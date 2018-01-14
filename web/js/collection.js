@@ -21,8 +21,8 @@ var updateAll = function() {
 　var obj = QueryString.parse(querytStr,'&','=',true);
 　console.log(obj);
 　
-  var t = 0;
-  var e = 'H';
+  var t = 6;
+  var e = 'Q';
   var m = 'Byte';
   var mb = 'default';
   var text ="byteball:";
@@ -37,8 +37,8 @@ var updateAll = function() {
   if(obj["img"]) document.getElementById('img').src = "images/"+obj["img"];
   
   if(obj["amount"]) {
-    document.getElementById('amount').innerText = "Amount: "+(parseInt(obj["amount"],10) / 1000 / 1000) +" M bytes";
-  	text = text+"?amount="+obj["address"];
+    document.getElementById('amount').innerText = "Amount: "+(parseInt(obj["amount"],10)) +" M bytes";
+  	text = text+"?amount="+(parseInt(obj["amount"],10)*1000*1000);
   }
   if(obj["message"]) {
   	document.getElementById('message').innerText = "Message: "+obj["message"];
@@ -46,6 +46,7 @@ var updateAll = function() {
   
   if(obj["btn"]) document.getElementById('send').innerText = obj["btn"];
   
+  console.log(text);
   document.getElementById('qr').innerHTML = createQRcode(text, t, e, m, mb);
   
   document.getElementById("send").onclick = function(){
@@ -56,7 +57,7 @@ var updateAll = function() {
   var date = new Date(); 
   var year = date.getFullYear();
   var month = date.getMonth()+1;
-  var day = date.getDay();
+  var day = date.getDate();
   var hour = date.getHours();
   var minute = date.getMinutes();
   var second = date.getSeconds();
