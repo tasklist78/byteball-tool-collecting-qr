@@ -16,8 +16,8 @@
 	  <h1 id="title">Collection Form</h1>
 	  	<table class="table">
 		  <tr><th>Attribute</th><th>Input</th></tr>
-		  <tr><td>Title</td><td><input type="text" name="title"></td></tr>
-		  <tr><td>Description</td><td><input type="text" name="description"></td></tr>
+		  <tr><td>Title</td><td><input type="text" name="title" maxlength="50"></td></tr>
+		  <tr><td>Description</td><td><input type="text" name="description" maxlength="100"></td></tr>
 		  <tr><td>Image</td><td>
 			<select name="img">
 			<option value="logo.png">Byteball Logo</option>
@@ -25,9 +25,9 @@
 			<option value="nomikai_happy.png">Drinking Session</option>
 			<option value="bokin_boy.png">Donation</option>
 			</select></td></tr>
-		  <tr><td>Byteball Address</td><td><input type="text" name="address"></td></tr>
-		  <tr><td>Amount</td><td><input type="text" name="amount"></td></tr>
-		  <tr><td>Message</td><td><input type="text" name="message"></td></tr>
+		  <tr><td>Byteball Address</td><td><input type="text" name="address" maxlength="50"></td></tr>
+		  <tr><td>Amount(Mbyte)</td><td><input type="text" name="amount" maxlength="10"></td></tr>
+		  <tr><td>Message</td><td><input type="text" name="message"  maxlength="50"></td></tr>
 		</table>
 		<div>
 		<button type="submit" id="make" class="button3">MAKE</button>
