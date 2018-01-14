@@ -1,0 +1,2 @@
+# textcoin
+landing page
