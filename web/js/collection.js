@@ -37,8 +37,8 @@ var updateAll = function() {
   if(obj["img"]) document.getElementById('img').src = "images/"+obj["img"];
   
   if(obj["amount"]) {
-    document.getElementById('amount').innerText = "Amount: "+(parseInt(obj["amount"],10)) +" M bytes";
-  	text = text+"?amount="+(parseInt(obj["amount"],10)*1000*1000);
+    document.getElementById('amount').innerText = "Amount: "+(parseFloat(obj["amount"])) +" M bytes";
+  	text = text+"?amount="+(parseFloat(obj["amount"])*1000*1000);
   }
   if(obj["message"]) {
   	document.getElementById('message').innerText = "Message: "+obj["message"];
